@@ -1,10 +1,14 @@
 # Escrow Protocol
 
 // TODO: There is a bug in BuyerConfirmDelivery where if you put in false, it still confirms the delivery
+
 // TODO: implement seller locks NFT in escrow
+
 // TODO: After BuyerConfrimDelivery is true, take item out of getSellOrders array
+
 // TODO: After BuyerConfirmDelvery is false and/or EscrowRefund Item, reset values so that item is either delisted or back up for sale
-// TODOL make function to allow edit of Listing Price Fee and Escrow Royalty Percentage
+
+// TODO: make function to allow edit of Listing Price Fee and Escrow Royalty Percentage
 
 Note: Currently when making a sell order, seller needs to send 0.0045 ETH 
 
@@ -13,15 +17,24 @@ Note: Currently when making a sell order, seller needs to send 0.0045 ETH
 To use the current version:
 
 1. Clone github repo
-2. % npm install
+2. run % cd escrow-contract2 and
+
+% npm install 
+in terminal
+
 3. update the hardhat.config.js file account key and rpc url by creating a file named ".env" and pasting
+
 RPC_URL=
+
 PRIVATE_KEY=
+
 ETHERSCAN_API_KEY=
+
+
 And input relevant info next to the equal signs.
-4. Save everything and do %npx hardhat run scripts/deploy.js --network ropsten
+4. Save everything and do % npx hardhat run scripts/deploy.js --network ropsten
 5. If you want to change the network, follow the same template in hardhat.config.js and replace the "ropsten" in the terminal line above with the other network's name
-6. The contract should be deployed soon, and you can interact with it here: https://contract.mph.am/ or on the ropsten etherscan 
+6. The contract should be deployed soon, and you can interact with it here: https://contract.mph.am/ or on the ropsten etherscan: https://ropsten.etherscan.io/address/0xE9A03Bd5fA823FD0CDA9B841514010A559959F99#code
 
 
 ----
