@@ -1,16 +1,8 @@
 # Escrow Protocol
 
-// TODO: There is a bug in BuyerConfirmDelivery where if you put in false, it still confirms the delivery
-
-// TODO: implement seller locks NFT in escrow
-
-// TODO: After BuyerConfrimDelivery is true, take item out of getSellOrders array
-
-// TODO: After BuyerConfirmDelvery is false and/or EscrowRefund Item, reset values so that item is either delisted or back up for sale
-
-// TODO: make function to allow edit of Listing Price Fee and Escrow Royalty Percentage
-
 Note: Currently when making a sell order, seller needs to send 0.0045 ETH 
+
+Note2: There are still some bugs with current escrow contract, and more features will be implemented in the near future
 
 ----
 
