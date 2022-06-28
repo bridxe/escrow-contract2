@@ -6,7 +6,7 @@ Note2: There are still some bugs with current escrow contract, and more features
 
 ----
 
-To use the current version (a more in-depth guide will be uploaded later on):
+To use the current version (a more in-depth user guide with details on the Escrow flow itself will be uploaded later on):
 
 1. Clone github repo
 2. In a terminal, run % cd escrow-contract2
