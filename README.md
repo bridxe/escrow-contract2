@@ -14,15 +14,13 @@ Note: Currently when making a sell order, seller needs to send 0.0045 ETH
 
 ----
 
-To use the current version:
+To use the current version (a more in-depth guide will be uploaded later on):
 
 1. Clone github repo
-2. run % cd escrow-contract2 and
+2. In a terminal, run % cd escrow-contract2
+3. % npm install 
 
-% npm install 
-in terminal
-
-3. update the hardhat.config.js file account key and rpc url by creating a file named ".env" and pasting
+4. update the hardhat.config.js file account key and rpc url by creating a file named ".env" and pasting
 
 RPC_URL=
 
@@ -30,11 +28,14 @@ PRIVATE_KEY=
 
 ETHERSCAN_API_KEY=
 
-
 And input relevant info next to the equal signs.
-4. Save everything and do % npx hardhat run scripts/deploy.js --network ropsten
-5. If you want to change the network, follow the same template in hardhat.config.js and replace the "ropsten" in the terminal line above with the other network's name
-6. The contract should be deployed soon, and you can interact with it here: https://contract.mph.am/ or on the ropsten etherscan: https://ropsten.etherscan.io/address/0xE9A03Bd5fA823FD0CDA9B841514010A559959F99#code
+
+
+5. Save everything and do % npx hardhat run scripts/deploy.js --network ropsten
+
+6. If you want to change the network, follow the same template in hardhat.config.js and replace the "ropsten" in the terminal line above with the other network's name
+
+7. The contract should be deployed soon, and you can interact with it here: https://contract.mph.am/ or on the ropsten etherscan: https://ropsten.etherscan.io/address/0xE9A03Bd5fA823FD0CDA9B841514010A559959F99#code
 
 
 ----
