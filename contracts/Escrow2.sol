@@ -4,6 +4,11 @@ pragma solidity ^0.8.7;
 
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
+// TODO: There is a bug in BuyerConfirmDelivery where if you put in false, it still confirms the delivery
+// TODO: implement seller locks NFT in escrow
+// TODO: After BuyerConfrimDelivery is true, take item out of getSellOrders array
+// TODO: After BuyerConfirmDelvery is false and/or EscrowRefund Item, reset values so that item is either delisted or back up for sale
+
 contract Escrow2 is ReentrancyGuard {
     string public name = "BridXe escrow contract";
 
@@ -16,7 +21,7 @@ contract Escrow2 is ReentrancyGuard {
     uint256 public totalDisputed = 0;
 
     // Challenge: make this price dynamic according to the current currency price
-    uint256 private listingFee = 0.0045 ether;
+    uint256 private listingFee = 0.0045 ether; //TODO: Make a function to edit this later on
 
     mapping(uint256 => ItemStruct) private items;
     mapping(address => ItemStruct[]) private itemsOf;
@@ -60,7 +65,7 @@ contract Escrow2 is ReentrancyGuard {
         escAcc = msg.sender;
         escBal = 0;
         escRoyalty = 0; 
-        escFee = 10; //Set escrow royalty percentage
+        escFee = 10; //Set escrow royalty percentage, TODO: Make function to edit this later on
     }
 
     function getListingFee() public view returns (uint256) {
@@ -208,7 +213,6 @@ contract Escrow2 is ReentrancyGuard {
         require(items[itemId].status != Status.REFUNDED, "Already refunded, create a new Item");
         require(msg.sender == items[itemId].buyer, "Only buyer allowed");
 
-        //TODO: reset values after delivery, alllow item for resale
         if(delivered) {
             uint256 fee = (items[itemId].paidPrice * escFee) / 100;
             payTo(items[itemId].owner, (items[itemId].paidPrice - fee));
@@ -242,7 +246,6 @@ contract Escrow2 is ReentrancyGuard {
         return true;
     }
 
-    //TODO: how to reset item for sale again after its been refunded
     function escrowRefundItem(uint256 itemId) external returns (bool) {
         require(msg.sender == escAcc, "Only Escrow wallet allowed");
         require(!items[itemId].confirmed, "item delivery was already confirmed");

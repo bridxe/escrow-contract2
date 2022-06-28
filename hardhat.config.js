@@ -22,9 +22,14 @@ module.exports = {
       chainId: 1337
     },
     ropsten: {
-      url: process.env.ROPSTEN_URL || "",
+      url: process.env.RPC_URL || "",
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+    zileNet1: {
+      url: process.env.RPC_URL || "",
+      chainId: 64,
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
   },
   etherscan: {
