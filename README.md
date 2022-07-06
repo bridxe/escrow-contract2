@@ -1,4 +1,6 @@
-# Escrow Protocol
+# BridXeEscrow Protocol
+
+Example contract: https://ropsten.etherscan.io/address/0x4e9B132816DA9145478CA9c6e061d359dAABbCCd#code
 
 Note: Currently when making a sell order, seller needs to send 0.0045 ETH 
 
@@ -9,25 +11,32 @@ Note2: There are still some bugs with current escrow contract, and more features
 To use the current version (a more in-depth user guide with details on the Escrow flow itself will be uploaded later on):
 
 1. Clone github repo
-2. In a terminal, run % cd escrow-contract2
-3. % npm install 
+2. In a terminal, run 
 
-4. update the hardhat.config.js file account key and rpc url by creating a file named ".env" and pasting
+```
+cd escrow-contract2
+npm install 
+```
 
-RPC_URL=
+3. create a new file in the root directory named ".env" and paste the following: 
 
-PRIVATE_KEY=
+MUMBAI_RPC_URL=
+ROPSTEN_RPC_URL=
+AURORATEST_RPC_URL=
+RINKEBY_RPC_URL=
+PRIVATE_KEY_1=
 
-ETHERSCAN_API_KEY=
+4. And input relevant info next to the equal signs (you can always add more as you add more networks to deploy to in truffle-config.js)
 
-And input relevant info next to the equal signs.
+5. Save everything and run
 
+```
+truffle migrate --network YOUR_DESIRED_NETWORK
+```
 
-5. Save everything and do % npx hardhat run scripts/deploy.js --network ropsten
+6. If you want to change the network, follow the same template in truffle-config.js and replace the "YOUR_DESIRED_NETWORK" in the terminal line above with the other network's name
 
-6. If you want to change the network, follow the same template in hardhat.config.js and replace the "ropsten" in the terminal line above with the other network's name
-
-7. The contract should be deployed soon, and you can interact with it here: https://contract.mph.am/ or on the ropsten etherscan: https://ropsten.etherscan.io/address/0xE9A03Bd5fA823FD0CDA9B841514010A559959F99#code
+7. The contract should be deployed soon, and you can interact with it here: (Example) http://tinyurl.com/BridXeEscrow2UI or on the ropsten etherscan
 
 
 ----
