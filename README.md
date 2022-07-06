@@ -40,7 +40,7 @@ truffle migrate --network YOUR_DESIRED_NETWORK
 
 6. If you want to change the network, follow the same template in truffle-config.js and replace the "YOUR_DESIRED_NETWORK" in the terminal line above with the other network's name
 
-7. The contract should be deployed soon, and you can interact with it here: (Example) http://tinyurl.com/BridXeEscrow2UI or on the ropsten etherscan
+7. The contract should be deployed soon. To find it, look for "contract address" under the BridXeEscrow deployment in your terminal - copy it and search for it on etherscan or whichever network scanner you deployed to. For our ropsten contract, you can interact with it here: (Example) http://tinyurl.com/BridXeEscrow2UI or on the ropsten etherscan
 
 8. To verify it on etherscan, select "multi-file solidity" and compiler 0.8.11. Keep everything else the same and when it prompts you to upload files, upload all 3 from your computer: 
 
