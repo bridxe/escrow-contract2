@@ -2,14 +2,14 @@
 
 pragma solidity ^0.8.7;
 
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import './ReentrancyGuard.sol';
 
 // TODO: There is a bug in BuyerConfirmDelivery where if you put in false, it still confirms the delivery
 // TODO: implement seller locks NFT in escrow
 // TODO: After BuyerConfrimDelivery is true, take item out of getSellOrders array
 // TODO: After BuyerConfirmDelvery is false and/or EscrowRefund Item, reset values so that item is either delisted or back up for sale
 
-contract Escrow2 is ReentrancyGuard {
+contract BridXeEscrow is ReentrancyGuard {
     string public name = "BridXe escrow contract";
 
     address private escAcc;
