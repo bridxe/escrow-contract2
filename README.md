@@ -42,6 +42,14 @@ truffle migrate --network YOUR_DESIRED_NETWORK
 
 7. The contract should be deployed soon, and you can interact with it here: (Example) http://tinyurl.com/BridXeEscrow2UI or on the ropsten etherscan
 
+8. To verify it on etherscan, select "multi-file solidity" and compiler 0.8.11. Keep everything else the same and when it prompts you to upload files, upload all 3 from your computer: 
+
+```
+Migrations.sol
+ReentrancyGuard.sol
+BridXeEscrow.sol
+```
+and it should work.
 
 ----
 
