@@ -10,7 +10,11 @@ Note2: There are still some bugs with current escrow contract, and more features
 
 To use the current version (a more in-depth user guide with details on the Escrow flow itself will be uploaded later on):
 
-**Recomended to have VSCode installed and the github extension
+Requirements: must have 1. the MetaMask Wallet chrome extension installed, 2. a text editor (see below for recommnedations) with the proper extensions, and 3. Hardhat and/or Truffle installed (look up how to install via Terminal command)
+
+Strongly Recommended: Download VSCode for your system and install the Solidity extension and GitHub Repositories extension
+
+----
 
 1. Clone github repo
 2. In a terminal, run 
