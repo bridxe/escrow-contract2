@@ -27,11 +27,7 @@ npm install
 
 3. create a new file in the root directory named ".env" and paste the following: 
 
-MUMBAI_RPC_URL=
-
 ROPSTEN_RPC_URL=
-
-AURORATEST_RPC_URL=
 
 RINKEBY_RPC_URL=
 
