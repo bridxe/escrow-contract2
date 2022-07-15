@@ -1,6 +1,6 @@
 # BridXeEscrow Protocol
 
-Example contract: https://ropsten.etherscan.io/address/0x4e9B132816DA9145478CA9c6e061d359dAABbCCd#code
+Example contract: https://ropsten.etherscan.io/address/0xE9A03Bd5fA823FD0CDA9B841514010A559959F99#code
 
 Note: Currently when making a sell order, seller needs to send 0.0045 ETH 
 
