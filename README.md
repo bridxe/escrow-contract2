@@ -41,7 +41,7 @@ PRIVATE_KEY_1=
 truffle migrate --network YOUR_DESIRED_NETWORK
 ```
 
-6. If you want to change the network, follow the same template in truffle-config.js and replace the "YOUR_DESIRED_NETWORK" in the terminal line above with the other network's name
+6. If you want to change the network, follow the same template in truffle-config.js and replace the "YOUR_DESIRED_NETWORK" in the terminal line above with the other network's name (if confused, check out Medium article for in-depth guide)
 
 7. The contract should be deployed soon. To find it, look for "contract address" under the BridXeEscrow deployment in your terminal - copy it and search for it on etherscan or whichever network scanner you deployed to. For our ropsten contract, you can interact with it here: (Example) http://tinyurl.com/BridXeEscrow2UI or on the ropsten etherscan
 
@@ -52,7 +52,8 @@ Migrations.sol
 ReentrancyGuard.sol
 BridXeEscrow.sol
 ```
-and it should work.
+
+9. Extra: To create and deploy to your own local Avalanche subnet, check out our Medium article!
 
 ----
 
