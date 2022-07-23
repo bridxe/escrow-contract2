@@ -21,7 +21,7 @@ contract BridXeEscrow is ReentrancyGuard {
     uint256 public totalDisputed = 0;
 
     // Challenge: make this price dynamic according to the current currency price
-    uint256 private listingFee = 0.0045 ether; //TODO: Make a function to edit this later on
+    uint256 private listingFee; 
 
     mapping(uint256 => ItemStruct) private items;
     mapping(address => ItemStruct[]) private itemsOf;
@@ -66,6 +66,7 @@ contract BridXeEscrow is ReentrancyGuard {
         escBal = 0;
         escRoyalty = 0; 
         escFee = 10; //Set escrow royalty percentage, TODO: Make function to edit this later on
+        listingFee = 0.0045 ether; //TODO: Make a function to edit this later on
     }
 
     function getListingFee() public view returns (uint256) {
@@ -185,7 +186,7 @@ contract BridXeEscrow is ReentrancyGuard {
         return true;
     }
 
-    function sellerPerformDelievery(uint256 itemId) external returns (bool) {
+    function sellerPerformDelivery(uint256 itemId) external returns (bool) {
         require(msg.sender == items[itemId].owner, "Service not awarded to you, only the owner of the item may perform this action");
         require(msg.sender != escAcc, "Escrow wallet cannot interact with buy or sell orders");
         require(!items[itemId].delivered, "item already delivered");
