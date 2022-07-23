@@ -1,4 +1,10 @@
-# Escrow Protocol
+# BridXeEscrow Protocol
+
+Medium Article: https://medium.com/@zilecao/ab3e25919f75
+
+----
+
+Example contract: https://ropsten.etherscan.io/address/0xE9A03Bd5fA823FD0CDA9B841514010A559959F99#code
 
 Note: Currently when making a sell order, seller needs to send 0.0045 ETH 
 
@@ -6,29 +12,47 @@ Note2: There are still some bugs with current escrow contract, and more features
 
 ----
 
-To use the current version (a more in-depth user guide with details on the Escrow flow itself will be uploaded later on):
+To use the current version (for a more in-depth user guide with videos, scroll to the Quickstart section on our medium article):
+
+
+----
 
 1. Clone github repo
-2. In a terminal, run % cd escrow-contract2
-3. % npm install 
+2. In a terminal, run 
 
-4. update the hardhat.config.js file account key and rpc url by creating a file named ".env" and pasting
+```
+cd escrow-contract2
+npm install 
+```
 
-RPC_URL=
+3. create a new file in the root directory named ".env" and paste the following: 
 
-PRIVATE_KEY=
+ROPSTEN_RPC_URL=
 
-ETHERSCAN_API_KEY=
+RINKEBY_RPC_URL=
 
-And input relevant info next to the equal signs.
+PRIVATE_KEY_1=
 
+4. And input relevant info next to the equal signs (you can always add more as you add more networks to deploy to in truffle-config.js)
 
-5. Save everything and do % npx hardhat run scripts/deploy.js --network ropsten
+5. Save everything and run
 
-6. If you want to change the network, follow the same template in hardhat.config.js and replace the "ropsten" in the terminal line above with the other network's name
+```
+truffle migrate --network YOUR_DESIRED_NETWORK
+```
 
-7. The contract should be deployed soon, and you can interact with it here: https://contract.mph.am/ or on the ropsten etherscan: https://ropsten.etherscan.io/address/0xE9A03Bd5fA823FD0CDA9B841514010A559959F99#code
+6. If you want to change the network, follow the same template in truffle-config.js and replace the "YOUR_DESIRED_NETWORK" in the terminal line above with the other network's name
 
+7. The contract should be deployed soon. To find it, look for "contract address" under the BridXeEscrow deployment in your terminal - copy it and search for it on etherscan or whichever network scanner you deployed to. For our ropsten contract, you can interact with it here: (Example) http://tinyurl.com/BridXeEscrow2UI or on the ropsten etherscan
+
+8. To verify it on etherscan, select "multi-file solidity" and compiler 0.8.11. Keep everything else the same and when it prompts you to upload files, upload all 3 from your computer: 
+
+```
+Migrations.sol
+ReentrancyGuard.sol
+BridXeEscrow.sol
+```
+and it should work.
 
 ----
 
