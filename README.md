@@ -1,4 +1,4 @@
-# BridXeEscrow Protocol
+# BridXe Escrow Protocol
 
 Medium Article: https://medium.com/@zilecao/ab3e25919f75
 
